@@ -1,5 +1,5 @@
-
 from utils.card import Card
+import random
 
 
 class Player:
@@ -17,8 +17,7 @@ class Player:
     def play(self):
         card = random.choice(self.cards)
         self.history.append(card)
-        pname1 = Player("nano")
-        print(f"Your card is", pname1, card)
+        print(f"Your card is", "Nano", card)
 
 
 class Deck:
@@ -26,27 +25,33 @@ class Deck:
     def __init__(self):
         self.cards = []
         self.fill_deck()
+        """self.show()"""
+        self.shuffle()
+        self.distribute()
 
     def fill_deck(self):
         for s in ['\u2666', '\u2665', '\u2663', '\u2660']:
             for v in range(1, 14):
                 self.cards.append(Card(s, v, ""))
+        return self
 
-    def show(self):
+    """def show(self):
         for c in self.cards:
-            c.show()
+            c.show()"""
+
+    def shuffle(self):
+
+        for i in range(len(self.cards) - 1, 0, -1):
+            r = random.randint(0, i)
+            self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
+            return self
+
+    def distribute(self):
+        self.cards.pop()
+        return self
 
 
 deck = Deck()
-deck.show()
-
-    def shuffle(self):
-        for i in range(len(self.cards)-1, 0, -1):
-             r = random.randint(0, i)
-             self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
-
-    deck = Deck()
-    deck.shuffle()
-    deck.show()
-
-
+card1 = deck.shuffle()
+card2 = deck.distribute()
+print(card1, card2)

@@ -1,5 +1,5 @@
-
 class symbol:
+
     def __init__(self, icon, color):
         self.color = color
         self.icon = icon
