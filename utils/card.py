@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class symbol:
     def __init__(self, icon, color):
         self.color = color
@@ -18,4 +19,6 @@ class Card(symbol):
 
 yourcard = Card('\u2665', "red", 5)
 print(yourcard)
+=======
+>>>>>>> 2734ce5afd6c8f5d2d3c84ff884d2797a5a87b31
 

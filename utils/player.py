@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from utils.card import Card
 import random
 
@@ -47,4 +48,6 @@ deck.show()
     deck = Deck()
     deck.shuffle()
     deck.show()
+=======
+>>>>>>> 2734ce5afd6c8f5d2d3c84ff884d2797a5a87b31
 
