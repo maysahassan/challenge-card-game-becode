@@ -1,4 +1,3 @@
-print ("Hello world")
 
 class Card:
     def __init__(self, suit, val):
